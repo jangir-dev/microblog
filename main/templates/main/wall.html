@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+
+{% block title %} 
+	Posts
+{% endblock %}
+
+{% block content %} 
+	
+	<h1 class="wallpreview">Latest posts :</h1>
+
+	<div class="wallcontainer">	
+
+		{% for item in posts %}
+
+			<div class="post">
+
+				<h2>{{ item.title }}</h2>
+			
+			
+				<article>{{ item.content }}</article>
+				<br>
+				
+				<blockquote>
+					{{ item.author }}
+					{{ item.pub_date }}
+				</blockquote>
+
+				
+
+			</div> 
+
+			<br>
+
+		{% endfor %}
+	
+
+{% endblock %}
